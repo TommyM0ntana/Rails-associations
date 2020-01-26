@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   
+  get  'signup', to: 'user#new'
   get 'static_page/home'
   get 'static_page/help'
   get 'static_page/about'
   get  '/help', to: 'static_page#help'
   get  '/home', to: 'static_page#home'
   get  'static_page/home', to: 'static_page#home'
-
-  root 'static_pages#home'
+  get  '/about', to: 'static_page#about'
+  get  '/contact', to: 'static_page#contact'
+ 
+  root 'static_page#home'
 
 
 
